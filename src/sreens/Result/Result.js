@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import HomeImage from '../../../assets/images/HomeImage.png'
 
-const Result = () => {
+const Result = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text>Result</Text>
@@ -12,8 +12,15 @@ const Result = () => {
         resizeMode="contain"
         />
     </View>
-    <TouchableOpacity>
-        <Text> Home</Text>
+    <TouchableOpacity 
+        onPress={() => navigation.navigate('Quiz')}
+         >
+        <Text> Recomencer </Text>
+    </TouchableOpacity>
+    <TouchableOpacity 
+        onPress={() => navigation.navigate('Home')}
+         >
+        <Text> Home </Text>
     </TouchableOpacity>
     </View>
   )
